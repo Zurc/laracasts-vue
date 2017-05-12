@@ -1,4 +1,5 @@
 <template>
+  <!-- always wrap your template with one div -->
   <div>
     <input type="text" v-model="msg">
   
@@ -9,6 +10,7 @@
 <script>
 export default {
   name: 'hello',
+  // data is our single source of truth.
   data () {
     return {
       msg: 'hello world'
