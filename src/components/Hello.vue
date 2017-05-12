@@ -1,10 +1,8 @@
 <template>
   <!-- always wrap your template with one div -->
   <div>  
-    <button v-bind:title="title">Hover Over Me</button>
-    <!-- shorthand 
-    <button :title="title">Hover Over Me</button>
-    -->
+    <!-- conditionally set classes -->
+    <button :class="{ 'is-loading': isLoading }" @click="toggleClass">Toggle Me</button>
   </div>
 </template>
 
@@ -14,7 +12,12 @@ export default {
   // data is our single source of truth.
   data () {
     return {
-      title: 'Now the title is being set through Javascript'
+      isLoading: false
+    }
+  },
+  methods: {
+    toggleClass () {
+      this.isLoading = !this.isLoading
     }
   }
 }
@@ -22,5 +25,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+  .is-loading {
+    background: red;
+  }
 </style>
