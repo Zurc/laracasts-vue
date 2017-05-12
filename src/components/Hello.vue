@@ -1,9 +1,10 @@
 <template>
   <!-- always wrap your template with one div -->
-  <div>
-    <input type="text" v-model="msg">
-  
-    <p>The value of the input is: {{ msg }} </p>
+  <div>  
+    <ul>
+      <!-- I can access using v-text or {{ }} syntax -->
+      <li v-for="name in names" v-text="name"></li>
+    </ul>
   </div>
 </template>
 
@@ -13,7 +14,7 @@ export default {
   // data is our single source of truth.
   data () {
     return {
-      msg: 'hello world'
+      names: ['Joe', 'Mary', 'Jane', 'Jack']
     }
   }
 }
