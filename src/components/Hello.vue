@@ -5,6 +5,12 @@
       <!-- I can access using v-text or {{ }} syntax -->
       <li v-for="name in names" v-text="name"></li>
     </ul>
+
+    <input type="text" id="input" v-model="newName">
+    <button v-on:click="addName()">Add Name</button>
+    <!--shorthand
+    <button @click="addName()">Add Name</button>
+    -->
   </div>
 </template>
 
@@ -14,7 +20,14 @@ export default {
   // data is our single source of truth.
   data () {
     return {
+      newName: '',
       names: ['Joe', 'Mary', 'Jane', 'Jack']
+    }
+  },
+  methods: {
+    addName () {
+      this.names.push(this.newName)
+      this.newName = ''
     }
   }
 }
