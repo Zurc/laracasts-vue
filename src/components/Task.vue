@@ -1,22 +1,20 @@
 <template>
-  <!-- always wrap your template with one div -->
-  <div>
-    {{ msg }}
-  </div>
+    <li><slot></slot></li>
 </template>
 
 <script>
 export default {
   name: 'Task',
-  // data is our single source of truth.
+
   data () {
     return {
-      msg: 'task component'
+      message: 'Foobar'
     }
   }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-</style>
+
+new Vue({
+    el: '#app'
+})

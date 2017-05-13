@@ -1,16 +1,22 @@
 <template>
   <div id="app">
-    <router-link to="/">Hello</router-link>
-    <router-link to="/Task">Task</router-link>
+
+    <Task>Go to the bank</Task>
+    <Task>Go to the store</Task>
+    <Task>Go to the work</Task>  
 
     <router-view></router-view>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'app'
-}
+  import Task from '@/components/Task'
+  export default {
+    name: 'app',
+    components: {
+      Task: Task
+    }
+  }
 </script>
 
 <style>
