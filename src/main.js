@@ -3,7 +3,6 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-// import Task from '@/components/Task'
 
 Vue.config.productionTip = false
 

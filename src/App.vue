@@ -1,20 +1,19 @@
 <template>
   <div id="app">
 
-    <Task>Go to the bank</Task>
-    <Task>Go to the store</Task>
-    <Task>Go to the work</Task>  
+    <tasklist></tasklist>
 
     <router-view></router-view>
   </div>
 </template>
 
 <script>
-  import Task from '@/components/Task'
+  import tasklist from '@/components/task-list'
+
   export default {
     name: 'app',
     components: {
-      Task: Task
+      tasklist: tasklist
     }
   }
 </script>
