@@ -7,11 +7,11 @@
 
 <script>
 export default {
-  name: 'hello',
+  name: 'Task',
   // data is our single source of truth.
   data () {
     return {
-      msg: 'Hello component'
+      msg: 'task component'
     }
   }
 }
@@ -19,7 +19,4 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  .delete {
-    display: hidden;
-  }
 </style>
