@@ -1,19 +1,18 @@
 <template>
   <div id="app">
-
-    <tasklist></tasklist>
-
-    <router-view></router-view>
+    <message title="Hello World" body="Lorem ipsum dolor sit amet"></message>
+    
+    <message title="Hello Universe" body="bla bla bla"></message>
   </div>
 </template>
 
 <script>
-  import tasklist from '@/components/task-list'
+  import message from '@/components/Message'
 
   export default {
     name: 'app',
     components: {
-      tasklist: tasklist
+      message
     }
   }
 </script>
