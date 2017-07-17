@@ -1,7 +1,10 @@
 <template>
   <div id="app">
 
-    <modal v-if="showModal" @close="showModal = false"></modal>
+    <modal v-if="showModal" @close="showModal = false">
+      <h2>Titulo</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique fugiat magnam maiores quia rerum illum quidem quod temporibus eaque nam veritatis eius eos officia, nobis repellendus aspernatur. Quia, esse, qui!</p>
+    </modal>
     <message title="Hello World" body="Lorem ipsum dolor sit amet"></message>
     <message title="Hello Universe" body="bla bla bla"></message>
 
