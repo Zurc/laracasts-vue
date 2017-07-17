@@ -2,7 +2,7 @@
     <article class="message" v-show="isVisible"> 
         <div class="message-header">
             <p>{{ title }}</p>
-            <button class="delete" @click="hideModal"></button>
+            <button class="delete" @click="isVisible = false"></button>
         </div>
         <div class="message-body">
             {{ body }}
@@ -20,9 +20,6 @@ export default {
     }
   },
   methods: {
-    hideModal () {
-      this.isVisible = false
-    }
   }
 }
 </script>
